@@ -1,0 +1,14 @@
+<p>
+  <strong>Author:</strong>
+  <%= @article.author %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_user_article_path(@user) %> |
+  <%= link_to 'Back', user_articles_path %>
+<% end %>
